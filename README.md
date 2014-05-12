@@ -19,3 +19,5 @@ Where:
  - **output.mp4** is the destination movie file
 
 Currently the fps used for the movie is hardcoded in `main.m`, this will be an optional command line parameter in the future.
+
+[twitter]: http://twitter.com/kluivers
