@@ -36,9 +36,10 @@
 - (void) writeToFileAtURL:(NSURL *)fileURL
 {
     NSProgress *progress = [NSProgress progressWithTotalUnitCount:[self.imageURLs count]];
+    [progress setUserInfoObject:fileURL forKey:NSProgressFileURLKey];
     progress.pausable = NO;
     
-    [progress becomeCurrentWithPendingUnitCount:[self.imageURLs count]];
+    [progress publish];
     
     NSImage *firstImage = [[NSImage alloc] initWithContentsOfURL:self.imageURLs[0]];
     
