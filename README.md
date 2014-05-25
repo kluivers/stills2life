@@ -1,4 +1,4 @@
-jbw-stills2life
+stills2life
 ===============
 
 An OS X commandline utility to create a movie file from a sequence of still images. Useful for creating a timelapse movie for example.
