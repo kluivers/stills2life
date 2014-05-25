@@ -35,6 +35,8 @@
 
 - (void) writeToFileAtURL:(NSURL *)fileURL
 {
+    NSProgress *progress = [NSProgress progressWithTotalUnitCount:[self.imageURLs count]];
+    
     NSImage *firstImage = [[NSImage alloc] initWithContentsOfURL:self.imageURLs[0]];
     
     CGSize frameSize = firstImage.size;
@@ -85,10 +87,16 @@
     CVPixelBufferRef buffer = NULL;
     
     for (int i=0; i<[self.imageURLs count]; i++) {
+        
+        if ([progress isCancelled]) {
+            break;
+        }
+        
         NSURL *imageURL = self.imageURLs[i];
     
         buffer = [self fastImageFromImageURL:imageURL];
         if (!buffer) {
+            [progress setCompletedUnitCount:i+1];
             continue;
         }
         
@@ -105,13 +113,13 @@
             NSLog(@"Failed to write frame to movie: %@", [videoWriter error]);
         }
         
+        [progress setCompletedUnitCount:i+1];
         
         CVBufferRelease(buffer);
     }
     
     __block BOOL ready = NO;
     [videoWriter finishWritingWithCompletionHandler:^{
-        NSLog(@"Finished writing");
         ready = YES;
     }];
     

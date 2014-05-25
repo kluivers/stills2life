@@ -107,9 +107,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A943DD701920FDF000BE0403 /* still2life */ = {
+		A943DD701920FDF000BE0403 /* stills2life */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A943DD7F1920FDF000BE0403 /* Build configuration list for PBXNativeTarget "still2life" */;
+			buildConfigurationList = A943DD7F1920FDF000BE0403 /* Build configuration list for PBXNativeTarget "stills2life" */;
 			buildPhases = (
 				A943DD6D1920FDF000BE0403 /* Sources */,
 				A943DD6E1920FDF000BE0403 /* Frameworks */,
@@ -119,7 +119,7 @@
 			);
 			dependencies = (
 			);
-			name = still2life;
+			name = stills2life;
 			productName = still2life;
 			productReference = A943DD711920FDF000BE0403 /* still2life */;
 			productType = "com.apple.product-type.tool";
@@ -145,7 +145,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A943DD701920FDF000BE0403 /* still2life */,
+				A943DD701920FDF000BE0403 /* stills2life */,
 			);
 		};
 /* End PBXProject section */
@@ -265,7 +265,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A943DD7F1920FDF000BE0403 /* Build configuration list for PBXNativeTarget "still2life" */ = {
+		A943DD7F1920FDF000BE0403 /* Build configuration list for PBXNativeTarget "stills2life" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A943DD801920FDF000BE0403 /* Debug */,
